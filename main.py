@@ -29,7 +29,7 @@ game = Game()
 
 game_on = True
 arriere_x = 0
-temps_depart = time.localtime
+temps_depart = time.time()
 son=pygame.mixer.Sound('assets/sounds/Rocket Empire - SriSro.mp3')
 
 
@@ -41,7 +41,7 @@ while game_on:
      arriere_x=game.Jouer(ecran_de_fond,arriere_x,premier_joueur,deuxieme_joueur)
  elif game.game_on is False and game.intro is True:
 
-    temps_fin=time.localtime
+    temps_fin=time.time()
     ecran_de_fond.blit(introduction,(0,0))
     temps = temps_fin - temps_depart
     if temps>=9:
