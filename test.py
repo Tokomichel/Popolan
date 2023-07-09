@@ -1,3 +1,7 @@
 import time
+import sys
+import os
 
-print(time.time())
+debut = time.time()
+
+fin = time.time()

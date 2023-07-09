@@ -11,16 +11,17 @@ from deuxieùe_joueur import Deuxieme_joueur
 
 
 class Game:
+    
     def __init__(self):
         # est ce qu'on joue ?
 
-        self.game_on=False
-        self.intro=True
-        self.ajout= True
-        self.player=joueur(self)
-        self.type_monstre=False
-        self.score=0
-        self.niveau=0
+        self.game_on = False
+        self.intro = True
+        self.ajout = True
+        self.player = joueur(self)
+        self.type_monstre = False
+        self.score = 0
+        self.niveau = 0
         self.group_joueur = pygame.sprite.Group()
         self.group_joueur.add(self.player)
         self.player2=Deuxieme_joueur(self)
@@ -29,8 +30,8 @@ class Game:
         self.groupe_cheban = pygame.sprite.Group()
         self.lancement_cheban()
         self.lancement_cheban()
-        self.monstre=cheban(self)
-        self. utilise={}
+        self.monstre = cheban(self)
+        self.utilise = {}
         self.image_monstre_faible = pygame.image.load("image/projectile.png")
         self.image_monstre_faible = pygame.transform.scale(self.image_monstre_faible,(30,30))
 
@@ -48,12 +49,6 @@ class Game:
             self.ajout=False
         elif self.score>=30 and self.score<=40:
             self.niveau=3
-
-
-
-
-
-
 
     def Jouer(self,ecran_de_fond,arriere_x,premier_joueur,deuxieme_joueur):
 
@@ -136,7 +131,7 @@ class Game:
     def lancement_cheban(self):
         self.monstre = cheban(self)
         self.monstre2 = Cheban_gauche(self)
-        self.type_monstre=random.choice([True,False])
+        self.type_monstre = random.choice([True,False])
         if self.type_monstre:
           self.groupe_cheban.add(self.monstre)
         else:

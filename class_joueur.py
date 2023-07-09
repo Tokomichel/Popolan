@@ -8,40 +8,40 @@ from super_comb import Grande_attaque
 class joueur(pygame.sprite.Sprite):
     def __init__(self,game):
         super().__init__()
-        self.point_de_vie=130
-        self.max_point_de_vie=130
-        self.game=game
-        self.droite=True
-        self.attaque_super=Grande_attaque(self.game)
-        self.vitesse=6
-        self.coup_critique=0
-        self.super_combo=False
-        self.lancement_combo=False
-        self.max_coup_critique=130
-        self.group_projectiles=pygame.sprite.Group()
-        self.groupe_boutton=pygame.sprite.Group()
-        self.image=pygame.image.load("image/player.png")
-        self.image=pygame.transform.scale(self.image,(165,165))
-        self.sound=pygame.mixer.Sound("assets/sounds/tir.ogg")
+        self.point_de_vie = 130
+        self.max_point_de_vie = 130
+        self.game = game
+        self.droite = True
+        self.attaque_super = Grande_attaque(self.game)
+        self.vitesse = 6
+        self.coup_critique = 0
+        self.super_combo = False
+        self.lancement_combo = False
+        self.max_coup_critique = 130
+        self.group_projectiles = pygame.sprite.Group()
+        self.groupe_boutton = pygame.sprite.Group()
+        # self.image = pygame.image.load("image/player.png")
+        self.image = pygame.transform.scale(pygame.image.load("image/player.png"),(165,165))
+        self.sound = pygame.mixer.Sound("assets/sounds/tir.ogg")
 
         self.rect = self.image.get_rect()
-        self.rect.y=217
-        self.rect.x=400
-        self.x=self.rect.x+45
-        self.y=self.rect.y+45
-        self.saut=False
-        self.vitesse_saut=20
-        self.frame=1
-        self.operation_coup_de_poing=False
-        self.liste_image=self.remplissage()
+        self.rect.y = 217
+        self.rect.x = 400
+        self.x = self.rect.x+45
+        self.y = self.rect.y+45
+        self.saut = False
+        self.vitesse_saut = 20
+        self.frame = 1
+        self.operation_coup_de_poing = False
+        self.liste_image = self.remplissage()
 
     def remplissage(self):
-        liste_image=list()
-        frame=0
-        while frame<= 23:
-            liste_image.append(pygame.image.load("assets/player/player"+str(frame+1)+".png"))
-            liste_image[frame]=pygame.transform.scale(liste_image[frame],(165,165))
-            frame+=1
+        liste_image = list()
+        frame = 0
+        while frame <= 23:
+            liste_image.append(pygame.image.load("assets/player/player" + str(frame+1) + ".png"))
+            liste_image[frame] = pygame.transform.scale(liste_image[frame],(165,165))
+            frame += 1
         return liste_image
 
     def animation_coup_de_poing(self):

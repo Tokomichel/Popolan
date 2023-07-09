@@ -7,6 +7,7 @@ instanciation=["droite","gauche"]
 class cheban(pygame.sprite.Sprite):
 
     def __init__(self,game):
+        
         super().__init__()
         self.point_de_vie=100
         self.max_point_de_vie=100
@@ -24,7 +25,7 @@ class cheban(pygame.sprite.Sprite):
         self.rect.y=250
         self.x = self.rect.x + 76
         self.y = self.rect.y + 117
-        self.vitesse =1
+        self.vitesse = 1
         self.image=pygame.transform.scale(self.image,(100,100))
         self.liste_image=self.chagement_liste()
 
@@ -64,17 +65,16 @@ class cheban(pygame.sprite.Sprite):
         barre_color = (75, 78, 61)
         pygame.draw.rect(surface, barre_color, barre_position)
 
-
     def deplacer(self):
         self.animation()
         if not self.game.check_collision(self,self.game.group_joueur):
-         self.rect.x-=self.vitesse
-
+         self.rect.x -= self.vitesse
 
         elif self.game.check_collision(self,self.game.group_joueur):
             self.game.player.point_de_vie-=self.point_attaque
             if self.game.player.point_de_vie<=0:
                self.game.player.Game_over()
+
 
 class Cheban_gauche(pygame.sprite.Sprite):
 
