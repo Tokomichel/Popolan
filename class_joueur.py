@@ -6,6 +6,7 @@ from super_comb import Grande_attaque
 
 
 class joueur(pygame.sprite.Sprite):
+    
     def __init__(self,game):
         super().__init__()
         self.point_de_vie = 130
