@@ -100,10 +100,6 @@ class joueur(pygame.sprite.Sprite):
                 self.saut=False
                 self.vitesse_saut=20
 
-
-
-
-
     def lancement(self,combo):
 
        self.boutton_combo()
@@ -112,7 +108,6 @@ class joueur(pygame.sprite.Sprite):
            self.coup_critique=0
        else:
            self.group_projectiles.add(projectile(self))
-
 
     def barre_de_vie(self,surface):
         barre_color=(0,255,0)
@@ -135,7 +130,6 @@ class joueur(pygame.sprite.Sprite):
 
         pygame.draw.rect(surface,barre_grise_color,barre_grise_position)
         pygame.draw.rect(surface,barre_color,barre_position)
-
 
     def Game_over(self):
         self.coup_critique = 0

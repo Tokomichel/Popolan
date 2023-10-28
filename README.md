@@ -3,11 +3,11 @@
 Ceci est un jeu videos creer entierement en languge python
 Inspire d'une formation youtube de graven.
 
-[image du lancement du jeu][prog]
+![image du lancement du jeu][prog]
 ##
-[image debut du jeu][play]
+![image debut du jeu][play]
 ##
-[image du jeu proprement dit][playing]
+![image du jeu proprement dit][playing]
 
 ## Toko Michel
 

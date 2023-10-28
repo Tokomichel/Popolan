@@ -24,7 +24,7 @@ class Game:
         self.niveau = 0
         self.group_joueur = pygame.sprite.Group()
         self.group_joueur.add(self.player)
-        self.player2=Deuxieme_joueur(self)
+        self.player2 = Deuxieme_joueur(self)
         self.groupe_player2=pygame.sprite.Group()
 
         self.groupe_cheban = pygame.sprite.Group()
