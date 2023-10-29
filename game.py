@@ -54,6 +54,7 @@ class Game:
 
 
         ecran_de_fond.blit(self.player.image, self.player.rect)
+        # ecran_de_fond.blit(self.player2.image, self.player.rect)
 
 
         self.player.barre_max_de_vie(ecran_de_fond)
