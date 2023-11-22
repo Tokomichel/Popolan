@@ -37,7 +37,7 @@ class cheban(pygame.sprite.Sprite):
             liste_image.append(pygame.image.load("assets/mummy/mummy"+str(frame+1)+".png"))
             liste_image[frame]=pygame.transform.scale(liste_image[frame],(110,110))
             frame+=1
-            print(frame+4)
+            # print(frame+4)
         return liste_image
 
     def dommage(self,damage):
